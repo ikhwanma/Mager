@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentTambah"
+    android:background="@color/white">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:src="@drawable/header_tambah"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="138dp"
+            android:layout_height="174dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="31dp"
+            android:src="@drawable/view_style"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+        <Button
+            android:id="@+id/btnPemasukan"
+            android:layout_width="138dp"
+            android:layout_height="174dp"
+            android:background="@color/transparent"
+
+            app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+            app:layout_constraintEnd_toEndOf="@+id/imageView9"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView9" />
+
+        <Button
+            android:id="@+id/btnPengeluaran"
+            android:layout_width="138dp"
+            android:layout_height="174dp"
+            android:background="@color/transparent"
+
+            app:layout_constraintBottom_toBottomOf="@+id/imageView13"
+            app:layout_constraintEnd_toEndOf="@+id/imageView13"
+            app:layout_constraintStart_toStartOf="@+id/imageView13" />
+
+        <Button
+            android:id="@+id/btnPinjaman"
+            android:layout_width="138dp"
+            android:layout_height="174dp"
+            android:background="@color/transparent"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+            app:layout_constraintEnd_toEndOf="@+id/imageView16"
+            app:layout_constraintStart_toStartOf="@+id/imageView16" />
+
+        <Button
+            android:id="@+id/btnBudget"
+            android:layout_width="138dp"
+            android:layout_height="174dp"
+            android:background="@color/transparent"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView19"
+            app:layout_constraintEnd_toEndOf="@+id/imageView19"
+            app:layout_constraintStart_toStartOf="@+id/imageView19" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="42dp"
+            android:text="Catat Keuangan"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="27dp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Disini Kamu dapat menambahkan catatan\nuntuk mengatur keuangan Kamu "
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@+id/imageView8"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Pemasukan"
+            style="@style/Mager"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView9"
+            app:layout_constraintStart_toStartOf="@+id/imageView9"
+            app:layout_constraintTop_toTopOf="@+id/imageView9" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="66dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/entypo_wallet"
+            app:layout_constraintEnd_toEndOf="@+id/imageView9"
+            app:layout_constraintStart_toStartOf="@+id/imageView9"
+            app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="7dp"
+            android:src="@drawable/ic_baseline_add_circle_24"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+            app:layout_constraintStart_toStartOf="@+id/imageView9" />
+
+        <TextView
+            android:id="@+id/textView23"
+            style="@style/Mager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Tambah"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+            app:layout_constraintStart_toEndOf="@+id/imageView11" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="138dp"
+            android:layout_height="174dp"
+            android:layout_marginTop="31dp"
+            android:layout_marginEnd="40dp"
+            android:src="@drawable/view_style"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Pengeluaran"
+            style="@style/Mager"
+            android:fontFamily="@font/poppins_bold"
+            app:layout_constraintEnd_toEndOf="@+id/imageView13"
+            app:layout_constraintStart_toStartOf="@+id/imageView13"
+            app:layout_constraintTop_toTopOf="@+id/imageView13" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="21dp"
+            android:src="@drawable/cash"
+            app:layout_constraintEnd_toEndOf="@+id/imageView13"
+            app:layout_constraintStart_toStartOf="@+id/imageView13"
+            app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="7dp"
+            android:src="@drawable/ic_baseline_add_circle_24"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView13"
+            app:layout_constraintStart_toStartOf="@+id/imageView13" />
+
+        <TextView
+            android:id="@+id/textView25"
+            style="@style/Mager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Tambah"
+            app:layout_constraintBottom_toBottomOf="@+id/btnPengeluaran"
+            app:layout_constraintStart_toEndOf="@+id/imageView15" />
+
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="138dp"
+            android:layout_height="174dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="35dp"
+            android:src="@drawable/view_style"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Pinjaman"
+            style="@style/Mager"
+            android:fontFamily="@font/poppins_bold"
+            app:layout_constraintEnd_toEndOf="@+id/imageView16"
+            app:layout_constraintStart_toStartOf="@+id/imageView16"
+            app:layout_constraintTop_toTopOf="@+id/imageView16" />
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/card"
+            app:layout_constraintEnd_toEndOf="@+id/imageView16"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="@+id/imageView16"
+            app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="7dp"
+            android:src="@drawable/ic_baseline_add_circle_24"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+            app:layout_constraintStart_toStartOf="@+id/imageView16" />
+
+        <TextView
+            android:id="@+id/textView27"
+            style="@style/Mager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Tambah"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+            app:layout_constraintStart_toEndOf="@+id/imageView18" />
+
+        <ImageView
+            android:id="@+id/imageView19"
+            android:layout_width="138dp"
+            android:layout_height="174dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="40dp"
+            android:src="@drawable/view_style"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Budget Harian"
+            style="@style/Mager"
+            android:fontFamily="@font/poppins_bold"
+            app:layout_constraintEnd_toEndOf="@+id/imageView19"
+            app:layout_constraintStart_toStartOf="@+id/imageView19"
+            app:layout_constraintTop_toTopOf="@+id/imageView19" />
+
+        <ImageView
+            android:id="@+id/imageView20"
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="13dp"
+            android:src="@drawable/calculator"
+            app:layout_constraintEnd_toEndOf="@+id/imageView19"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="@+id/imageView19"
+            app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+        <ImageView
+            android:id="@+id/imageView21"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="7dp"
+            android:src="@drawable/ic_baseline_add_circle_24"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView19"
+            app:layout_constraintStart_toStartOf="@+id/imageView19" />
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginBottom="10dp"
+            android:text="Tambah"
+            style="@style/Mager"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView19"
+            app:layout_constraintStart_toEndOf="@+id/imageView21" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

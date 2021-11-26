@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/vector_home"/>
+    <item
+        android:id="@+id/tambah"
+        android:title="Tambah"
+        android:icon="@drawable/ic_baseline_add_circle_24"/>
+    <item
+        android:id="@+id/riwayat"
+        android:title="Riwayat"
+        android:icon="@drawable/ic_baseline_history_24"/>
+</menu>

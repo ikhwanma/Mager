@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentRiwayat"
+    android:background="@color/white">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnFilter"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="36dp"
+            android:background="@color/transparent"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="409dp"
+            android:layout_height="525dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            tools:listitem="@layout/list_item" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="132dp"
+            android:src="@drawable/header_tambah"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="135dp" />
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Riwayat Catatan"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Riwayat transaksi pencatatan keuangan\nyang berhasil ditambahkan"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+        <ImageView
+            android:id="@+id/imageView23"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="35dp"
+            android:src="@drawable/ci_filter"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2" />
+
+        <ImageView
+            android:id="@+id/imgFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/filter"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toStartOf="@+id/btnFilter"
+            app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+        <Button
+            android:id="@+id/btnTanggal"
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:background="@color/transparent"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/imgFilter"
+            app:layout_constraintStart_toStartOf="@+id/imgFilter"
+            app:layout_constraintTop_toTopOf="@+id/imgFilter" />
+
+        <Button
+            android:id="@+id/btnGrafik"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:background="@color/transparent"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/imgFilter"
+            app:layout_constraintStart_toStartOf="@+id/imgFilter"
+            app:layout_constraintTop_toBottomOf="@+id/btnTanggal" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

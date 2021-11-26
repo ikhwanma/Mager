@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".GrafikActivity">
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/header_back" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="70dp"
+        android:background="@color/transparent"
+        android:layout_height="51dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView12"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="40dp"
+        android:layout_height="33dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+        app:layout_constraintEnd_toEndOf="@+id/btnBack"
+        app:layout_constraintStart_toStartOf="@+id/imageView12"
+        app:layout_constraintTop_toTopOf="@+id/btnBack"
+        app:srcCompat="@drawable/back" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView33" >
+
+    </com.github.mikephil.charting.charts.PieChart>
+
+    <TextView
+        android:id="@+id/textView33"
+        style="@style/Mager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="21dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Grafik"
+        android:textSize="26dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+
+    <ImageView
+        android:id="@+id/imageView26"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="12dp"
+        android:background="#FF56EE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chart" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Pemasukan"
+        android:textColor="#FF56EE"
+        android:textSize="14dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView26"
+        app:layout_constraintTop_toBottomOf="@+id/chart" />
+
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="12dp"
+        android:background="#7A04D7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView26" />
+
+    <TextView
+        android:id="@+id/textView35"
+        style="@style/Mager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="12dp"
+        android:text="Pengeluaran"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintStart_toEndOf="@+id/imageView27"
+        app:layout_constraintTop_toBottomOf="@+id/imageView26" />
+
+    <Button
+        android:id="@+id/btnLastWeek"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:background="@color/transparent"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/imgFilter"
+        app:layout_constraintStart_toStartOf="@+id/imgFilter"
+        app:layout_constraintTop_toTopOf="@+id/imgFilter" />
+
+    <Button
+        android:id="@+id/btnLastMonth"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:background="@color/transparent"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/imgFilter"
+        app:layout_constraintStart_toStartOf="@+id/imgFilter"
+        app:layout_constraintTop_toBottomOf="@+id/btnLastWeek" />
+
+    <Button
+        android:id="@+id/btnLastYear"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:background="@color/transparent"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/imgFilter"
+        app:layout_constraintStart_toStartOf="@+id/imgFilter"
+        app:layout_constraintTop_toBottomOf="@+id/btnLastMonth" />
+
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="43dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12"
+        app:srcCompat="@drawable/ci_filter_ungu" />
+
+    <Button
+        android:id="@+id/btnFilter"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@color/transparent"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="43dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+
+    <ImageView
+        android:id="@+id/imgFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/imageView28"
+        app:layout_constraintTop_toBottomOf="@+id/imageView28"
+        app:srcCompat="@drawable/filter_grafik" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
