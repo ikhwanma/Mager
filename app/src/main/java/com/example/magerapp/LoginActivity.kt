@@ -70,19 +70,20 @@ class LoginActivity : AppCompatActivity() {
         editor.putString("PASSWORD",pass)
         editor.putBoolean("CHECKBOX",checked)
         editor.apply()
-        if (email.isEmpty()){
-            inputEmail.setError("Email Tidak Boleh Kosong")
-            inputEmail.requestFocus()
-            return
-        }
-        if (!cek){
-            inputEmail.setError("Email Tidak Sesuai Format")
-            inputEmail.requestFocus()
-            return
-        }
-        if (pass.isEmpty()){
-            inputPass.setError("Password Tidak Boleh Kosong")
-            inputPass.requestFocus()
+        if ( email.isEmpty() || pass.isEmpty() || !cek){
+
+            if (email.isEmpty()){
+                inputEmail.setError("Email Tidak Boleh Kosong")
+                inputEmail.requestFocus()
+            }
+            if(pass.isEmpty()){
+                inputPass.setError("Password Tidak Boleh Kosong")
+                inputPass.requestFocus()
+            }
+            if (!cek){
+                inputEmail.setError("Email Tidak Sesuai Format")
+                inputEmail.requestFocus()
+            }
             return
         }
         auth.signInWithEmailAndPassword(email,pass).addOnSuccessListener {

@@ -151,7 +151,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="47dp"
+            android:layout_marginTop="15dp"
             android:fontFamily="@font/poppins_bold"
             android:text="Transaksi Terbaru"
             android:textSize="14dp"
@@ -164,6 +164,7 @@
             android:layout_height="150dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/white"
             app:layout_constraintTop_toBottomOf="@+id/textView32"
             tools:listitem="@layout/list_item" />
 
@@ -171,7 +172,7 @@
             android:id="@+id/imageWarn"
             android:layout_width="285dp"
             android:layout_height="213dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="8dp"
             android:src="@drawable/transaksi_kosong"
             android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"

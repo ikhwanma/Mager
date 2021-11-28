@@ -62,39 +62,35 @@ class RegisterActivity : AppCompatActivity() {
         val email = inputEmail.text.toString()
         val cek = isValidString(email)
 
-        if (uname.isEmpty()){
-            inputUsername.setError("Username Tidak Boleh Kosong")
-            inputUsername.requestFocus()
-            return
-        }
-        if (uname.length<6){
-            inputUsername.setError("Username Minimal 6 Karakter")
-            inputUsername.requestFocus()
-            return
-        }
-        if (email.isEmpty()){
-            inputEmail.setError("Email Tidak Boleh Kosong")
-            inputEmail.requestFocus()
-            return
-        }
-        if (!cek){
-            inputEmail.setError("Email Tidak Sesuai Format")
-            inputEmail.requestFocus()
-            return
-        }
-        if (pass.isEmpty()){
-            inputPassword.setError("Password Tidak Boleh Kosong")
-            inputPassword.requestFocus()
-            return
-        }
-        if(inputKonfPass.text.toString() != pass){
-            inputKonfPass.setError("Password Tidak Sama")
-            inputKonfPass.requestFocus()
-            return
-        }
-        if (pass.length < 6){
-            inputPassword.setError("Password minimal 6 karakter")
-            inputPassword.requestFocus()
+        if (uname.isEmpty() || email.isEmpty() || pass.isEmpty() || uname.length<6 ||!cek ||inputKonfPass.text.toString() != pass ||pass.length < 6 ){
+            if(uname.isEmpty()){
+                inputUsername.setError("Username Tidak Boleh Kosong")
+                inputUsername.requestFocus()
+            }
+            if (email.isEmpty()){
+                inputEmail.setError("Email Tidak Boleh Kosong")
+                inputEmail.requestFocus()
+            }
+            if(pass.isEmpty()){
+                inputPassword.setError("Password Tidak Boleh Kosong")
+                inputPassword.requestFocus()
+            }
+            if (uname.length<6){
+                inputUsername.setError("Username Minimal 6 Karakter")
+                inputUsername.requestFocus()
+            }
+            if (!cek){
+                inputEmail.setError("Email Tidak Sesuai Format")
+                inputEmail.requestFocus()
+            }
+            if(inputKonfPass.text.toString() != pass){
+                inputKonfPass.setError("Password Tidak Sama")
+                inputKonfPass.requestFocus()
+            }
+            if (pass.length < 6){
+                inputPassword.setError("Password minimal 6 karakter")
+                inputPassword.requestFocus()
+            }
             return
         }
 
@@ -104,6 +100,8 @@ class RegisterActivity : AppCompatActivity() {
                 intent = Intent(this, SuksesActivity::class.java)
                 startActivity(intent)
             }
+        }.addOnFailureListener {
+            Toast.makeText(this, "Akun Sudah Terdaftar", Toast.LENGTH_SHORT).show()
         }
     }
     fun isValidString(str: String): Boolean{
@@ -118,4 +116,9 @@ class RegisterActivity : AppCompatActivity() {
         )
         return EMAIL_ADDRESS_PATTERN.matcher(str).matches()
     }
+
+    override fun onBackPressed() {
+        finish()
+    }
+
 }
