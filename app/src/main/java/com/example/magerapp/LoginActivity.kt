@@ -9,6 +9,7 @@ import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import java.util.regex.Pattern
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var inputEmail:EditText
@@ -66,5 +67,6 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(this,"Gagal",Toast.LENGTH_SHORT).show()
         }
     }
+
 
 }

@@ -116,7 +116,7 @@ class TambahActivity : AppCompatActivity() {
                         imageTanggal.visibility = View.INVISIBLE
                         viewTanggal.visibility = View.INVISIBLE
                     }
-                    if (viewJenis.text.toString()=="Peminjaman"){
+                    if (viewJenis.text.toString()=="Pinjaman"){
                         jumlahUang = peminjamanUser + uang
                         databaseUser.child(auth.currentUser!!.uid).child("peminjaman").setValue(jumlahUang)
                     }

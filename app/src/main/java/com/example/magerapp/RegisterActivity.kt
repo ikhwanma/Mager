@@ -60,20 +60,31 @@ class RegisterActivity : AppCompatActivity() {
         val uname = inputUsername.text.toString()
         val pass = inputPassword.text.toString()
         val email = inputEmail.text.toString()
+        val cek = isValidString(email)
 
         if (uname.isEmpty()){
             inputUsername.setError("Username Tidak Boleh Kosong")
             inputUsername.requestFocus()
             return
         }
-        if (pass.isEmpty()){
-            inputPassword.setError("Password Tidak Boleh Kosong")
-            inputPassword.requestFocus()
+        if (uname.length<6){
+            inputUsername.setError("Username Minimal 6 Karakter")
+            inputUsername.requestFocus()
             return
         }
         if (email.isEmpty()){
             inputEmail.setError("Email Tidak Boleh Kosong")
             inputEmail.requestFocus()
+            return
+        }
+        if (!cek){
+            inputEmail.setError("Email Tidak Sesuai Format")
+            inputEmail.requestFocus()
+            return
+        }
+        if (pass.isEmpty()){
+            inputPassword.setError("Password Tidak Boleh Kosong")
+            inputPassword.requestFocus()
             return
         }
         if(inputKonfPass.text.toString() != pass){
@@ -94,5 +105,17 @@ class RegisterActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
+    }
+    fun isValidString(str: String): Boolean{
+        val EMAIL_ADDRESS_PATTERN = Pattern.compile(
+            "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
+                    "\\@" +
+                    "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
+                    "(" +
+                    "\\." +
+                    "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
+                    ")+"
+        )
+        return EMAIL_ADDRESS_PATTERN.matcher(str).matches()
     }
 }

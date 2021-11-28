@@ -28,6 +28,7 @@ class RiwayatAdapter(private val transaksiList: ArrayList<Transaksi>): RecyclerV
         val hasilFormat = formatter.format(uang.toString().toDouble())
         if (currentItem.jenis=="Pemasukan") holder.viewUang.text = "+ RP. $hasilFormat"
         if (currentItem.jenis=="Pengeluaran") holder.viewUang.text = "- RP. $hasilFormat"
+        if (currentItem.jenis=="Pinjaman") holder.viewUang.text = "  RP. $hasilFormat"
     }
 
     override fun getItemCount(): Int {
