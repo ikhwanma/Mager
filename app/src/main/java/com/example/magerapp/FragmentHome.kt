@@ -145,7 +145,7 @@ class FragmentHome:Fragment(R.layout.fragment_home) {
                 Toast.makeText(activity, "Gagal", Toast.LENGTH_SHORT).show()
             }
 
-            // apalu 
+            // apalu
 
         })
     }

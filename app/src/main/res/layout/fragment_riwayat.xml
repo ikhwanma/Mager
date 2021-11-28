@@ -38,14 +38,13 @@
             android:layout_height="132dp"
             android:src="@drawable/header_tambah"
             app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="135dp" />
+            tools:layout_editor_absoluteX="-1dp" />
 
         <TextView
             android:id="@+id/textView30"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="10dp"
+            android:layout_margin="20dp"
             android:fontFamily="@font/poppins_bold"
             android:text="Riwayat Catatan"
             android:textColor="@color/white"
@@ -55,14 +54,15 @@
 
         <TextView
             android:id="@+id/textView31"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
+            android:layout_width="218dp"
+            android:layout_height="40dp"
             android:fontFamily="@font/poppins_regular"
             android:text="Riwayat transaksi pencatatan keuangan\nyang berhasil ditambahkan"
             android:textColor="@color/white"
             android:textSize="14dp"
-            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="@+id/textView30"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView30"
             app:layout_constraintTop_toBottomOf="@+id/textView30" />
 
         <ImageView
